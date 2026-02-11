@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>تجربة الملابس</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<h1>👕 جرّبي الملابس افتراضيًا</h1>
+
+<img src="/static/images/model.png" width="300">
+
+<br><br>
+
+<select id="clothes">
+  <option value="shirt1.png">قميص 1</option>
+  <option value="shirt2.png">قميص 2</option>
+</select>
+
+<br><br>
+
+<img id="cloth" src="/static/images/shirt1.png" width="200"
+style="position:absolute; top:250px; left:50%; transform:translateX(-50%);">
+
+<script>
+document.getElementById("clothes").onchange = function(){
+  document.getElementById("cloth").src =
+    "/static/images/" + this.value;
+}
+</script>
+
+</body>
+</html>
